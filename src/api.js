@@ -8,3 +8,8 @@ export const fetchArticles = () => {
     return data.articles;
   });
 };
+export const fetchArticleById = (id) => {
+  return ncNewsAPI.get(`/articles/${id}`).then(({ data }) => {
+    return data.article;
+  });
+};
