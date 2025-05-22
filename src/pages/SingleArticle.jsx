@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react";
 import { fetchArticleById } from "../api";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const SingleArticle = () => {
   const [singleArticle, setSingleArticle] = useState({});
   const { article_id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchArticleById(article_id).then((articleFromAPI) => {
       setSingleArticle(articleFromAPI);
     });
   }, [article_id]);
+  const handleCLick = () => {
+    navigate(`/articles/${article_id}/comments`);
+  };
   return (
     <>
       <h3>Title: {singleArticle.title}</h3>
@@ -21,6 +25,7 @@ const SingleArticle = () => {
       <p>Article Img:</p>
       <img className="card-image" src={singleArticle.article_img_url}></img>
       <p>Comment Count: {singleArticle.comment_count}</p>
+      <button onClick={handleCLick}>View Comments</button>
     </>
   );
 };
