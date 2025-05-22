@@ -18,3 +18,10 @@ export const fetchCommentsByArticleId = (id) => {
     return data.comments;
   });
 };
+export const patchArticleVotes = (id, votes) => {
+  return ncNewsAPI
+    .patch(`/articles/${id}`, { inc_votes: votes })
+    .then(({ data }) => {
+      return data.article;
+    });
+};
