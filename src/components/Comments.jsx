@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchCommentsByArticleId } from "../api";
 import { useParams } from "react-router-dom";
 
-const Comments = () => {
+const Comments = ({ formSubmit, setFormSubmit }) => {
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(false);
   const { article_id } = useParams();
@@ -13,7 +13,7 @@ const Comments = () => {
       setComments(commentsFromApi);
       setLoading(false);
     });
-  }, []);
+  }, [formSubmit]);
 
   if (loading) {
     return <p>Loading...</p>;
