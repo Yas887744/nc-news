@@ -25,3 +25,11 @@ export const patchArticleVotes = (id, votes) => {
       return data.article;
     });
 };
+export const postNewComment = (articleId, postObj) => {
+  return ncNewsAPI
+    .post(`/articles/${articleId}/comments`, postObj)
+    .then(({ data }) => {
+      return data.comment;
+    })
+    .catch((err) => "invalid input");
+};
