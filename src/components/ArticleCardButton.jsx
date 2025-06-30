@@ -6,7 +6,7 @@ const ArticleCardButton = ({ art_id }) => {
     navigate(`/articles/${art_id}`);
   };
 
-  return <button onClick={handleClick}>Click Me for more infomation</button>;
+  return <button onClick={handleClick}>Read More</button>;
 };
 
 export default ArticleCardButton;
