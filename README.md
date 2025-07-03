@@ -1,12 +1,19 @@
-# React + Vite
+# NC News Project Front-End
+Although this project is not fully complete by the end of it (or what I believe to be the end of it showing all the functionality) will be:
+* User can view all articles ✅
+* User can view a single article ✅
+* User can be logged in
+* User can vote on an article ✅
+* User can add a comment ✅
+* User can delete a comment
+* User can sort all articles by date, comment count, votes in ascending or descending order
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Netlify Link
+coming soon
+## Backend Repo Link
+https://github.com/Yas887744/news-be-project-yasin 
 
-Currently, two official plugins are available:
+## Minimum Version to run Project 
+Node v23.9.0
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This portfolio project was created as part of a Digital Skills Bootcamp in Software Engineering provided by [Northcoders](https://northcoders.com/)
